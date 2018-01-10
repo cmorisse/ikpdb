@@ -39,7 +39,7 @@ setup(
     #install_requires=['setuptools',],
     classifiers=[
         #'Framework :: Buildout',
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Debuggers',

@@ -234,7 +234,7 @@ class IKPdbConnectionHandler(object):
         :type command: str
         
         :param _id: Unique id of the sent message. Right now, it's always `None`
-                    for messages by debugger to client.
+                    for messages from debugger to client.
         :type _id: int
         
         :param result: Used to send `exit_code` and updated `executionStatus` 
@@ -1798,8 +1798,7 @@ def main():
     mainpyfile =  sys.argv[0]     # Get script filename
     _logger.g_debug("  mainpyfile = '%s'", mainpyfile)
     if not os.path.exists(mainpyfile):
-        print 'Error:', mainpyfile, 'does not exist'
-        sys.exit(1)
+        sys.exit("Error: '%s' does not exist." % mainpyfile)  # exit code = 1
 
     # sets up signal handlers
     signal.signal(signal.SIGINT, signal_handler)
