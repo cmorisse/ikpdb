@@ -1,3 +1,4 @@
+import time
 
 def processing():
     print("Line 3")
@@ -6,4 +7,5 @@ def processing():
 
 
 if __name__ == '__main__':
+    time.sleep(1)
     processing()
